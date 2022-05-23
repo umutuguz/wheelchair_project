@@ -1,0 +1,11 @@
+<launch>
+
+    <!-- Wheelchair Bring up -->
+    <include file="$(find wheelchair)/launch/wheelchair_bringup.launch" />
+
+    <!-- Gmapping -->
+    <include file="$(find wheelchair)/launch/gmapping.launch" />
+
+    <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find wheelchair)/rviz/wheelchair_gmapping.rviz" />
+
+</launch>

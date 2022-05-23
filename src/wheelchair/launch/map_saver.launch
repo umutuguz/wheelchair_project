@@ -1,0 +1,9 @@
+<launch>
+    
+    <arg name="map_file" default="/topic_map_1" />
+    
+    <node name="map_saver" pkg="map_server" type="map_saver" args="-f $(wheelchair)/maps/map_1">     
+
+    </node>
+   
+</launch>

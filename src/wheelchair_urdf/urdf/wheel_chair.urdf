@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="wheel_chair">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0600471604819967 0.00439213544760461 0.221474470099281"
+        rpy="0 0 0" />
+      <mass
+        value="100.569950446923" />
+      <inertia
+        ixx="4.48301901861672"
+        ixy="0.0349855645708372"
+        ixz="1.28165662218941"
+        iyy="7.27876793727071"
+        iyz="0.0398564867859076"
+        izz="3.9606066424214" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_big_wheel">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 -0.0275 1.0547118733939E-15"
+        rpy="0 0 0" />
+      <mass
+        value="3.19005851775017" />
+      <inertia
+        ixx="0.0222055020892376"
+        ixy="2.51803084243033E-19"
+        ixz="-2.81676763764174E-17"
+        iyy="0.0429444812918596"
+        iyz="-1.55599135569761E-19"
+        izz="0.0222055020892377" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/left_big_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/left_big_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_big_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.32005 0.315 -0.008"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_big_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="right_big_wheel">
+    <inertial>
+      <origin
+        xyz="-8.32667268468867E-17 0.0275 9.99200722162641E-16"
+        rpy="0 0 0" />
+      <mass
+        value="3.19005851775017" />
+      <inertia
+        ixx="0.0222055020892377"
+        ixy="-1.13575517018704E-19"
+        ixz="-3.09327695242051E-17"
+        iyy="0.0429444812918597"
+        iyz="2.10016504636252E-19"
+        izz="0.0222055020892377" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/right_big_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/right_big_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_big_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.32005 -0.315 -0.008"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_big_wheel" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="left_small_wheel">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 -0.0400000000000001 2.77555756156289E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.31881639542862" />
+      <inertia
+        ixx="0.00307756206748821"
+        ixy="-7.66247179909921E-19"
+        ixz="-1.74672358005914E-19"
+        iyy="0.00569232821091255"
+        iyz="-5.06507769485301E-19"
+        izz="0.00307756206748821" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/left_small_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/left_small_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_small_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0.31993 0.2835 -0.073"
+      rpy="0 0 0.00055161" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_small_wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_smaal_wheel">
+    <inertial>
+      <origin
+        xyz="0.000174507822597092 0.0399996193359368 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.31881639542862" />
+      <inertia
+        ixx="0.00307761183462662"
+        ixy="1.14073200972812E-05"
+        ixz="-2.08848241268008E-19"
+        iyy="0.00569227844377414"
+        iyz="1.53998924281543E-19"
+        izz="0.00307756206748821" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/right_smaal_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/right_smaal_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_small_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0.31978 -0.2835 -0.073"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_smaal_wheel" />
+    <axis
+      xyz="0.0043627 0.99999 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_lidar">
+    <inertial>
+      <origin
+        xyz="-0.00393393719392465 1.45541326387055E-05 -0.00550433759472346"
+        rpy="0 0 0" />
+      <mass
+        value="0.165382757413928" />
+      <inertia
+        ixx="7.88186497400901E-05"
+        ixy="4.81327415297136E-08"
+        ixz="-1.82339073198479E-06"
+        iyy="7.51902892774038E-05"
+        iyz="-2.9420939238945E-08"
+        izz="0.000109993288450695" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/back_lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 0.4" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/back_lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_lidar_joint"
+    type="fixed">
+    <origin
+      xyz="-0.36833 0.305 0.25299"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_lidar">
+    <inertial>
+      <origin
+        xyz="0.00417274073163831 7.93864644071385E-05 -0.00532501160387389"
+        rpy="0 0 0" />
+      <mass
+        value="0.165382782759051" />
+      <inertia
+        ixx="7.87141445089364E-05"
+        ixy="1.32968106585099E-07"
+        ixz="4.37269330421537E-07"
+        iyy="7.51948167581616E-05"
+        iyz="9.06152024097063E-08"
+        izz="0.000110093266294305" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/front_lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 0.4" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/front_lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.4012 -3.7661E-05 -0.092559"
+      rpy="0 0 0.00055161" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="-0.0128303969841449 0.000263456201996776 0.00120890764966197"
+        rpy="0 0 0" />
+      <mass
+        value="0.0247927918584364" />
+      <inertia
+        ixx="3.56506587063533E-05"
+        ixy="-1.1572052339377E-08"
+        ixz="-1.8226692503798E-07"
+        iyy="2.84011174627099E-06"
+        iyz="2.78712528047103E-08"
+        izz="3.35091989014233E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://wheel_chair/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="-0.387035971879652 -0.00396906785592691 1.52648295547757"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="-0.99739 -0.072202 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

@@ -1,0 +1,18 @@
+<launch>
+    
+    <!-- Arguments -->
+    <arg name="map_file" default="$(find wheelchair)/maps/map_1/map.yaml"/>
+
+    <!-- Wheelchair Bring up -->
+    <include file="$(find wheelchair)/launch/wheelchair_bringup.launch" />
+
+    <!-- AMCL -->
+    <include file="$(find wheelchair)/launch/amcl.launch" />
+    
+    <!-- Move Base -->
+    <include file="$(find wheelchair)/launch/move_base.launch" />
+
+    <!-- rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find wheelchair)/rviz/wheelchair_navigation.rviz"/>
+
+</launch>

@@ -1,0 +1,34 @@
+<launch>
+
+    <!-- Arguments-->
+    <arg name="open_rviz" default="false" />
+    <arg name="map_file" default="$(find wheelchair)/maps/map_1/map.yaml" />
+
+    <!-- Load the wheelchair URDF model into the parameter server -->
+    <param name="robot_description" textfile="$(find wheelchair)/urdf/wheelchair.urdf" />
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <!-- Motor Driver -->
+    <include file="$(find roboteq_diff_driver)/launch/driver.launch" />
+
+    <!-- Run RPlidar-->
+    <include file="$(find rplidar_ros)/launch/rplidars.launch" />
+
+    <!-- Run RealSense-->
+    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch" />-->
+
+    <!-- RP filter -->
+    <include file="$(find wheelchair)/launch/rp_filter.launch" />
+    
+    <!-- RP merge -->
+    <include file="$(find wheelchair)/launch/laserscan_multi_merger.launch" />
+
+    <!-- Rviz -->
+    <group if="$(arg open_rviz)">
+        <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find wheelchair)/rviz/wheelchair.rviz" />
+    </group>
+
+</launch>

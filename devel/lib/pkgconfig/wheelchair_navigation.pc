@@ -1,0 +1,8 @@
+prefix=/home/umut/wheelchair_ws/devel
+
+Name: wheelchair_navigation
+Description: Description of wheelchair_navigation
+Version: 0.0.0
+Cflags: -I/home/umut/wheelchair_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy message_runtime
